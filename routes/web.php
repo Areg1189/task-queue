@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExampleTask1Controller;
+use App\Http\Controllers\ExampleTask2Controller;
+use App\Http\Controllers\QueueStatusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/example-task-1', [ExampleTask1Controller::class, 'addTask']);
+Route::get('/example-task-2', [ExampleTask2Controller::class, 'addTask']);
+Route::get('/queue', [QueueStatusController::class, 'index']);
