@@ -38,4 +38,12 @@ To activate the scheduler, you need to configure a cron job to run the Laravel s
 or you can run a command for one-time execution to check inside the container
 `php artisan schedule:run`
 
+### DB CONFIG
+- DB_CONNECTION=mysql
+- DB_HOST=mysql
+- DB_PORT=3306
+- DB_DATABASE=task_queue
+- DB_USERNAME=task_queue
+- DB_PASSWORD=task_queue
+
 
